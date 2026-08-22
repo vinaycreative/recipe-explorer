@@ -1,1 +1,1 @@
-/** Saved recipes feature public API — implemented during feature development. */
+export { useSavedStore } from '@/features/saved/store';

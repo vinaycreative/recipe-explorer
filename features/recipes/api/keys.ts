@@ -1,0 +1,15 @@
+export const recipeKeys = {
+  all: ['recipes'] as const,
+  random: () => [...recipeKeys.all, 'random'] as const,
+  randomMeals: (count: number) => [...recipeKeys.all, 'random-meals', count] as const,
+  categories: () => [...recipeKeys.all, 'categories'] as const,
+  ingredients: () => [...recipeKeys.all, 'ingredients'] as const,
+  byCategory: (category: string) => [...recipeKeys.all, 'category', category] as const,
+  byArea: (area: string) => [...recipeKeys.all, 'area', area] as const,
+  byIngredient: (ingredient: string) => [...recipeKeys.all, 'ingredient', ingredient] as const,
+  popular: () => [...recipeKeys.all, 'popular'] as const,
+  featuredCuisines: () => [...recipeKeys.all, 'featured-cuisines'] as const,
+  discovery: () => [...recipeKeys.all, 'discovery'] as const,
+  detail: (id: string) => [...recipeKeys.all, 'detail', id] as const,
+  recentlyViewed: (ids: string[]) => [...recipeKeys.all, 'recently-viewed', ids] as const,
+};

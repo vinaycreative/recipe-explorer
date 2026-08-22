@@ -7,6 +7,7 @@ import { cn } from '@/lib/cn';
 type ScreenProps = {
   children: ReactNode;
   scroll?: boolean;
+  horizontalPadding?: boolean;
   className?: string;
   contentClassName?: string;
   scrollProps?: Omit<ScrollViewProps, 'children'>;
@@ -15,12 +16,13 @@ type ScreenProps = {
 export function Screen({
   children,
   scroll = true,
+  horizontalPadding = false,
   className,
   contentClassName,
   scrollProps,
 }: ScreenProps) {
   const content = (
-    <View className={cn('px-6 pb-32 pt-4', contentClassName)}>{children}</View>
+    <View className={cn(horizontalPadding && 'px-6', 'pb-32 pt-4', contentClassName)}>{children}</View>
   );
 
   return (
