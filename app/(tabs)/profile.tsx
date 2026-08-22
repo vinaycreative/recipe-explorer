@@ -16,7 +16,7 @@ const THEME_OPTIONS: { mode: ThemeMode; label: string; Icon: typeof Sun }[] = [
 ];
 
 const FOUNDATION_ITEMS = [
-  'NativeWind + semantic tokens',
+  'Uniwind + HeroUI Native',
   'Playfair Display + Inter fonts',
   'TanStack Query + Axios',
   'Zustand + AsyncStorage',

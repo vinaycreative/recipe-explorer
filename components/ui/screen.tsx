@@ -22,7 +22,15 @@ export function Screen({
   scrollProps,
 }: ScreenProps) {
   const content = (
-    <View className={cn(horizontalPadding && 'px-6', 'pb-32 pt-4', contentClassName)}>{children}</View>
+    <View
+      className={cn(
+        horizontalPadding && 'px-6',
+        'pb-32 pt-4',
+        !scroll && 'flex-1',
+        contentClassName,
+      )}>
+      {children}
+    </View>
   );
 
   return (

@@ -8,6 +8,27 @@ Never edit old entries.
 
 ---
 
+## Search UI & API Integration — 2026-08-22
+
+**Built**
+
+- Completely rebuilt Search screen UI to match Figma reference (1-column list, Playfair Display typography, horizontal filters).
+- Created `docs/features/search.md` feature document.
+- Integrated `useSearchMeals` for live typing search.
+- Integrated `useDiscoveryMeals` to populate the empty state when no query is present.
+- Wired "Trending Now" chips to automatically populate the search input.
+
+**Remaining**
+
+- Home tab implementation.
+- Recipe Detail screen.
+
+**Known bugs**
+
+- None verified.
+
+---
+
 ## Foundation Bootstrap — 2026-08-22
 
 **Built**

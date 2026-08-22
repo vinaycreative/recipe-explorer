@@ -12,4 +12,5 @@ export const recipeKeys = {
   discovery: () => [...recipeKeys.all, 'discovery'] as const,
   detail: (id: string) => [...recipeKeys.all, 'detail', id] as const,
   recentlyViewed: (ids: string[]) => [...recipeKeys.all, 'recently-viewed', ids] as const,
+  search: (query: string, mode: string) => [...recipeKeys.all, 'search', mode, query] as const,
 };

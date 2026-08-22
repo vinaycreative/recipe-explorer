@@ -18,7 +18,9 @@ export {
   fetchPopularMeals,
   fetchRandomMeal,
   fetchRandomMeals,
+  searchMeals,
 } from '@/features/recipes/api/client';
+export type { SearchMode } from '@/features/recipes/api/client';
 export { recipeKeys } from '@/features/recipes/api/keys';
 
 export { FEATURED_AREAS, FEATURED_INGREDIENTS } from '@/features/recipes/constants';
@@ -35,6 +37,7 @@ export { usePopularMeals } from '@/features/recipes/hooks/use-popular-meals';
 export { useRandomMeal } from '@/features/recipes/hooks/use-random-meal';
 export { useRandomMeals } from '@/features/recipes/hooks/use-random-meals';
 export { useRecentlyViewedMeals } from '@/features/recipes/hooks/use-recently-viewed-meals';
+export { useSearchMeals } from '@/features/recipes/hooks/use-search-meals';
 
 export { CategoryCard } from '@/features/recipes/components/category-card';
 export { CategoryCardRow } from '@/features/recipes/components/category-card-row';

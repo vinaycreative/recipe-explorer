@@ -1,4 +1,4 @@
-import { colorScheme } from 'nativewind';
+import { Uniwind } from 'uniwind';
 import { create } from 'zustand';
 
 export type ThemeMode = 'light' | 'dark' | 'system';
@@ -9,12 +9,7 @@ type ThemeState = {
 };
 
 function applyThemeMode(mode: ThemeMode) {
-  if (mode === 'system') {
-    colorScheme.set('system');
-    return;
-  }
-
-  colorScheme.set(mode);
+  Uniwind.setTheme(mode);
 }
 
 export const useThemeStore = create<ThemeState>((set) => ({

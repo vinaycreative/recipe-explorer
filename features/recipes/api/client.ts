@@ -153,3 +153,22 @@ export async function fetchMealsByIds(ids: string[]): Promise<MealSummary[]> {
 
   return meals.filter((meal): meal is MealDetail => meal !== null);
 }
+
+export type SearchMode = 'name' | 'ingredient';
+
+export async function searchMeals(query: string, mode: SearchMode = 'name'): Promise<MealSummary[]> {
+  const trimmed = query.trim();
+  if (!trimmed) {
+    return [];
+  }
+
+  if (mode === 'ingredient') {
+    return fetchMealsByIngredient(trimmed);
+  }
+
+  const { data } = await http.get('/search.php', {
+    params: { s: trimmed },
+  });
+
+  return parseMealSummaries(data);
+}

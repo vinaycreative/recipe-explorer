@@ -1,3 +1,48 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+@import 'tailwindcss';
+@import 'uniwind';
+@import 'heroui-native/styles';
+
+@source './node_modules/heroui-native/lib';
+
+@theme {
+  --color-background: #faf9f6;
+  --color-background-dark: #1a1814;
+  --color-foreground: #2c2416;
+  --color-foreground-muted: #8a8175;
+  --color-foreground-dark: #f5f0e8;
+  --color-foreground-muted-dark: #a89f94;
+  --color-card: #f3f0ea;
+  --color-card-dark: #2a2620;
+  --color-accent: #c45c3e;
+  --color-accent-dark: #e07a5f;
+  --color-primary: #4a5d3f;
+  --color-primary-dark: #6b8a5e;
+  --color-border: #e8e2d9;
+  --color-border-dark: #3d3830;
+
+  --font-serif: PlayfairDisplay_700Bold;
+  --font-serif-semibold: PlayfairDisplay_600SemiBold;
+  --font-sans: Inter_400Regular;
+  --font-sans-medium: Inter_500Medium;
+  --font-sans-semibold: Inter_600SemiBold;
+
+  --radius-4xl: 2rem;
+}
+
+@layer theme {
+  :root {
+    @variant light {
+      --font-normal: Inter_400Regular;
+      --font-medium: Inter_500Medium;
+      --font-semibold: Inter_600SemiBold;
+      --radius: 0.75rem;
+    }
+
+    @variant dark {
+      --font-normal: Inter_400Regular;
+      --font-medium: Inter_500Medium;
+      --font-semibold: Inter_600SemiBold;
+      --radius: 0.75rem;
+    }
+  }
+}
