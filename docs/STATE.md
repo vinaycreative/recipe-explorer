@@ -4,16 +4,16 @@
 
 ## Foundation
 
-**Status:** Ready
+**Status:** FOUNDATION READY
 
-Foundation bootstrap complete (Prompt 2). NativeWind, theme tokens, fonts, data layer infrastructure, and 4-tab navigation scaffold are configured. Starter experience polish is next (Prompt 3).
+Starter experience complete (Prompt 3). Typography, theme tokens, shared UI components, floating glass tab bar, animations, haptics, and 4-tab navigation are working. Ready for application feature development.
 
 ## What's Done / In Progress / Next
 
 | Feature | Status | Note |
 |---|---|---|
-| Foundation | Completed | All standard stack installed and wired |
-| Starter experience | Planned | Prompt 3 — polished shell demo |
+| Foundation | Completed | Full stack installed, verified |
+| Starter experience | Completed | Prompt 3 — polished shell demo |
 | Recipes API layer | Planned | First application feature |
 | Recipe Detail | Planned | Depends on API layer |
 | Home | Planned | Categories, random, recently viewed |
@@ -23,18 +23,20 @@ Foundation bootstrap complete (Prompt 2). NativeWind, theme tokens, fonts, data 
 
 ## Current Focus
 
-Prompt 3 — Ready to Build (starter experience).
+Recipes API layer — first application feature.
 
 ## Next
 
-Create polished starter/root experience demonstrating foundation, then begin recipes API layer.
+Implement `features/recipes/` API layer, schemas, and hooks. Then Recipe Detail screen.
 
 ## Do NOT Touch / Already Locked
 
 - Standard data flow: Screen → Hook → React Query → api.ts → lib/http.ts
 - 4-tab navigation: Home, Search, Saved, Profile
+- Floating glass tab bar component
 - TheMealDB as sole recipe data source
 - MMKV for local persistence, React Query for server state
+- TanStack Query legacy metro resolver (Hermes compatibility)
 
 ## Blockers
 

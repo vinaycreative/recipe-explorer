@@ -18,6 +18,7 @@ import 'react-native-reanimated';
 
 import { useColorScheme } from '@/hooks/use-color-scheme';
 import { AppProviders } from '@/providers/app-providers';
+import { ThemeHydrator } from '@/components/foundation/theme-hydrator';
 
 SplashScreen.preventAutoHideAsync();
 
@@ -47,6 +48,7 @@ export default function RootLayout() {
 
   return (
     <AppProviders>
+      <ThemeHydrator />
       <Stack>
         <Stack.Screen name="(tabs)" options={{ headerShown: false }} />
       </Stack>

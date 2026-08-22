@@ -33,7 +33,27 @@ Never edit old entries.
 
 ---
 
-## Hotfix — TanStack Query Hermes crash — 2026-08-22
+## Starter Experience — 2026-08-22
+
+**Built**
+
+- Shared UI components: Text, Button, Screen, Badge, Chip, SearchInput
+- Floating glassmorphism tab bar (BlurView + Lucide icons + haptics)
+- Theme store with light / dark / system toggle (NativeWind colorScheme)
+- Foundation demo screens on all 4 tabs (typography, colors, search UI, empty state, profile checklist)
+- Reanimated entrance animations on screen content
+- Expo Image demo card on Home
+- Removed template explore screen
+
+**Remaining**
+
+- Application features (recipes API, screens)
+
+**Known bugs**
+
+- None verified
+
+---
 
 **Built**
 

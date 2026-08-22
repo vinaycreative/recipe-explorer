@@ -119,3 +119,25 @@ Secondary recipe APIs.
 `features/recipes/api.ts`, `lib/env.ts`, `lib/http.ts`.
 
 ---
+
+## [006] — Floating glass tab bar
+
+**Date:** 2026-08-22
+
+**Decision**
+
+Replace default Expo tab chrome with a custom floating pill tab bar using `expo-blur`, matching UI reference mockups.
+
+**Why**
+
+UI reference specifies glassmorphism floating navigation; default tab bar does not match design direction.
+
+**Rejected**
+
+Default `@react-navigation/bottom-tabs` styling only.
+
+**Impact**
+
+`components/navigation/floating-tab-bar.tsx`, tab layout uses custom `tabBar` prop.
+
+---
