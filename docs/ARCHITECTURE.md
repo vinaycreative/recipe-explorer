@@ -178,23 +178,49 @@ Skills provide implementation guidance. This document remains the project's arch
 
 ### Feature folders
 
-[List actual feature folders and responsibilities.]
+| Feature | Responsibility |
+|---|---|
+| `features/recipes/` | TheMealDB API, schemas, hooks, recipe components |
+| `features/saved/` | Saved recipes store, collections, local search |
+| `features/profile/` | Local display name and avatar |
 
 ### External services
 
-[List external APIs/services and their purpose.]
+| Service | Purpose |
+|---|---|
+| TheMealDB | Recipe search, filter, lookup, categories, random |
+
+Base URL: `https://www.themealdb.com/api/json/v1/{API_KEY}/`  
+Dev key: `1` (via `EXPO_PUBLIC_THEMEALDB_API_KEY`)
 
 ### Authentication
 
-[Authentication strategy or `None`.]
+None. Local profile only.
 
 ### API notes
 
-[Base URL, authentication method, endpoint groups, caching/pagination requirements.]
+| Endpoint | Use |
+|---|---|
+| `search.php?s=` | Name search |
+| `filter.php?c=` / `?a=` / `?i=` | Category, cuisine, ingredient lists |
+| `lookup.php?i=` | Full recipe detail |
+| `random.php` | Recipe of the Day |
+| `categories.php` | Home category chips |
+
+- Filter responses are summaries; always lookup for detail
+- `meals: null` = empty, not error
+- No pagination; use FlashList
+- No time/rating/servings in API — do not fabricate
 
 ### Persistence
 
-[What is persisted locally and why.]
+| Data | Storage | Why |
+|---|---|---|
+| Saved recipes | MMKV via Zustand | User collection, survives restarts |
+| Recently viewed | MMKV | Home screen, max 20 items |
+| Profile name/avatar URI | MMKV | Greeting and Profile tab |
+| Server recipe data | React Query cache only | Do not duplicate in MMKV |
+| Sensitive credentials | Expo SecureStore | Reserved for future use |
 
 ## Architectural Decisions
 

@@ -4,28 +4,38 @@
 
 ## Foundation
 
-**Status:** [Not Started / In Progress / Ready / Blocked]
+**Status:** Ready
 
-[Short note about the current foundation state.]
+Foundation bootstrap complete (Prompt 2). NativeWind, theme tokens, fonts, data layer infrastructure, and 4-tab navigation scaffold are configured. Starter experience polish is next (Prompt 3).
 
 ## What's Done / In Progress / Next
 
 | Feature | Status | Note |
 |---|---|---|
-| [Feature] | [Planned / In Progress / Needs Review / Blocked / Completed] | [Short note] |
+| Foundation | Completed | All standard stack installed and wired |
+| Starter experience | Planned | Prompt 3 — polished shell demo |
+| Recipes API layer | Planned | First application feature |
+| Recipe Detail | Planned | Depends on API layer |
+| Home | Planned | Categories, random, recently viewed |
+| Search | Planned | Name search + filters |
+| Saved Recipes | Planned | MMKV + Zustand |
+| Profile | Planned | Local name/avatar |
 
 ## Current Focus
 
-[What is actively being worked on.]
+Prompt 3 — Ready to Build (starter experience).
 
 ## Next
 
-[Next feature or task.]
+Create polished starter/root experience demonstrating foundation, then begin recipes API layer.
 
 ## Do NOT Touch / Already Locked
 
-- [Locked decision, contract, or area]
+- Standard data flow: Screen → Hook → React Query → api.ts → lib/http.ts
+- 4-tab navigation: Home, Search, Saved, Profile
+- TheMealDB as sole recipe data source
+- MMKV for local persistence, React Query for server state
 
 ## Blockers
 
-[None / list blockers.]
+None.
